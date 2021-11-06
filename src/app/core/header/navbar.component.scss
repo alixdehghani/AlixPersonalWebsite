@@ -1,0 +1,58 @@
+@import "~@angular/material/theming";
+@import "../../scss/partials/respond.scss";
+
+.navbar {
+    background-color: mat-color($mat-indigo, 500);
+    color: mat-color($mat-grey, A100);
+    padding: 0.5rem 1rem;
+
+    &-window {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+
+        &__github {
+            margin-left: auto;
+        }
+
+        &[dir="rtl"] &__github {
+            margin-right: auto;
+        }
+
+        @include respond(tab-port) {
+            &__skill,
+            &__projects,
+            &__work-experience,
+            &__education,
+            &__ccertificates,
+            &__about {
+                display: none;
+            }
+        }
+
+        &__title {
+            &-logo-section {
+                display: flex;
+                align-items: center;
+            }
+            &-img {
+                height: 26px;
+                margin: 0 4px 3px 0;
+            }
+        }
+    }
+
+    &-mobile {
+        border-top: 1px solid currentColor;
+        display: none;
+        @include respond(tab-port) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @include respond(phone) {
+            display: block;
+        }
+    }
+}
+
