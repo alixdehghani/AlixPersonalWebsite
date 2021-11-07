@@ -1,0 +1,70 @@
+@import "~@angular/material/theming";
+
+.footer {
+    background-color: mat-color($mat-indigo, 400);
+    // padding: 10rem 0;
+    // font-size: 1.4rem;
+    color: mat-color($mat-grey, A100);
+
+    &_logo {
+        height: 3rem;
+    }
+
+    &_logo-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        opacity: 0.8;
+    }
+
+    &_content {
+        display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    &_navigation {
+        border-top: 1px solid mat-color($mat-grey, A200);
+    }
+
+    &_list {
+        list-style: none;
+    }
+
+    &_item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &_link {
+        &:link,
+        &:visited {
+            color: mat-color($mat-grey, A100);
+            background-color: mat-color($mat-indigo, 400);
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: mat-color($mat-grey, A200);
+            box-shadow: 0 1rem 2rem rgba(#000, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+
+    &_copyright {
+        border-top: 1px solid mat-color($mat-grey, A200);
+        padding-top: 1rem;
+        width: 35%;
+        float: right;
+    }
+
+}
