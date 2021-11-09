@@ -1,9 +1,8 @@
 @import "~@angular/material/theming";
+@import "../../scss/partials/respond.scss";
 
 .footer {
     background-color: mat-color($mat-indigo, 400);
-    // padding: 10rem 0;
-    // font-size: 1.4rem;
     color: mat-color($mat-grey, A100);
 
     &_logo {
@@ -20,10 +19,13 @@
 
     &_content {
         display: flex;
-        // flex-direction: column;
-        // align-items: center;
         justify-content: space-between;
         margin-bottom: 2rem;
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: center;
+        }
+        padding: 1rem;
     }
 
     &_navigation {
@@ -65,6 +67,9 @@
         padding-top: 1rem;
         width: 35%;
         float: right;
+        @include respond(phone) {
+            width: auto;
+        }
     }
 
 }
