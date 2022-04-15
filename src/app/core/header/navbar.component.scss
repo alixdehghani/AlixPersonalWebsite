@@ -62,7 +62,7 @@
     }
 
     &-mobile {
-        border-top: 1px solid currentColor;
+        // border-top: 1px solid currentColor;
         display: none;
         @include respond(tab-port) {
             display: flex;
@@ -71,6 +71,7 @@
         }
         @include respond(phone) {
             display: block;
+            padding: 0.5rem 1rem;
         }
     }
 }
